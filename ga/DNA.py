@@ -125,28 +125,3 @@ class DNA:
 
         # calculating fitness
         self.fitness = (1 / (dist * dist)) * 10
-
-    def print_track(self):
-        for i in self.track:
-            print(i)
-
-    def print_genes(self):
-        for i in self.gene:
-            print(i)
-
-    def print_genome(self):
-        for i in self.genome:
-            print(i)
-
-    def plot(self):
-        track_points = self.track
-        
-        start = track_points[0]
-        end = track_points[-1]
-        plot_x = [track_point.x for track_point in track_points]
-        plot_y = [track_point.y for track_point in track_points]
-        
-        plt.scatter(plot_x, plot_y)
-        plt.scatter(start.x, start.y, color="red")
-        plt.scatter(end.x, end.y, color="black")
-        plt.show()

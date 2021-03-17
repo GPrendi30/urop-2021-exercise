@@ -1,6 +1,7 @@
+import time
+
 from config import CHROMOSOME_LENGTH
 from ga.population import Population
-import time
 
 def ga(maxPop, mutation_rate, chromosome_length, maxGen):
     pop = Population(maxPop, mutation_rate, chromosome_length=chromosome_length)
@@ -26,4 +27,4 @@ def ga(maxPop, mutation_rate, chromosome_length, maxGen):
 
     pop.population[pop.getFittest()[1]].plot()
 
-ga(maxPop=300, mutation_rate=0.01, maxGen=1500, chromosome_length=24)
+ga(maxPop=300, mutation_rate=0.01, maxGen=1500, chromosome_length=CHROMOSOME_LENGTH)

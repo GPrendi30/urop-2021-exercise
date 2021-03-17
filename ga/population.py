@@ -1,9 +1,10 @@
-from ga.DNA import DNA
-from config import CHROMOSOME_LENGTH
+import math
+import random
+
+from ./config import CHROMOSOME_LENGTH
+from DNA import DNA
 from track_generator.command import Command
 from track_generator.generator import *
-import random
-import math
 
 class Population:
 
